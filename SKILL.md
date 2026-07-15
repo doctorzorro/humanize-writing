@@ -29,6 +29,18 @@ Match the language's certainty to the source's certainty — no reflexive soften
 - "it's worth noting that", "importantly", "interestingly"
 - Empty intensifiers: "truly", "incredibly", "absolutely game-changing"
 
+## Punctuation Tells
+
+Models overuse certain punctuation to the point that it reads as machine-written:
+
+- **Em-dash overuse.** The em-dash is a real tool, but AI reaches for it reflexively. Three or more in a short passage is a tell. Prefer commas, periods, or parentheses; keep em-dashes rare and deliberate.
+- **Arrow-and-colon lists in running prose** that isn't actually structured data ("the fix: X → Y → Z").
+
+Bad: "The fix was simple — two lines — and it shipped, no issues at all."
+Good: "The fix was two lines. It shipped with no issues."
+
+For pipelines, add a density check: flag any short passage whose em-dash count crosses a set threshold and rewrite it.
+
 Bad: "Oyarzabal is perhaps the most impressive player in the squad."
 Good: "Oyarzabal is the standout name in Spain's World Cup squad."
 
