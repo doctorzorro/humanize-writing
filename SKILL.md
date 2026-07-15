@@ -29,6 +29,34 @@ Match the language's certainty to the source's certainty — no reflexive soften
 - "it's worth noting that", "importantly", "interestingly"
 - Empty intensifiers: "truly", "incredibly", "absolutely game-changing"
 
+Bad: "Oyarzabal is perhaps the most impressive player in the squad."
+Good: "Oyarzabal is the standout name in Spain's World Cup squad."
+
+## AI Vocabulary
+
+Models fall back on a narrow palette of favorite words when they run out of something specific to say. These read as machine-written on sight:
+
+delve, tapestry, testament, leverage, unlock, navigate, boasts, seamless, robust, comprehensive, realm, landscape, ecosystem, framework, dynamic, elevate, foster, underscore, showcase, meticulous, bustling, vibrant.
+
+The fix is not a thesaurus swap — it is specificity. "leverage the framework" → "use the tool". "navigate the complexities" → name the actual complexity.
+
+## Negative Parallelism
+
+The single most recognizable 2026 tell. The model reaches for a contrast frame instead of stating the thing:
+
+- "It's not X, it's Y" / "It's not just X, it's Y" / "It's less about X and more about Y"
+
+Bad: "It's not about the tool; it's about how you use it."
+Good: "How you use the tool decides the outcome."
+
+## Structural Tells
+
+- Rigid Intro → Point → Point → Point → Conclusion on every piece, regardless of the material.
+- The rule of three everywhere — three adjectives, three-item lists — whether or not there are three real things.
+- Transition stacking: "Furthermore", "Moreover", "Additionally" opening consecutive sentences.
+- Emoji as section markers (🚀 headings) in text that is not a casual social post.
+- A reflexive "In conclusion" / "In summary" closer.
+
 ## Punctuation Tells
 
 Models overuse certain punctuation to the point that it reads as machine-written:
@@ -40,9 +68,6 @@ Bad: "The fix was simple — two lines — and it shipped, no issues at all."
 Good: "The fix was two lines. It shipped with no issues."
 
 For pipelines, add a density check: flag any short passage whose em-dash count crosses a set threshold and rewrite it.
-
-Bad: "Oyarzabal is perhaps the most impressive player in the squad."
-Good: "Oyarzabal is the standout name in Spain's World Cup squad."
 
 ## Hashtag / Tag Spam
 
